@@ -708,7 +708,7 @@ footer{background:var(--green-900);color:rgba(244,240,230,.6);padding:54px 0 40p
           <div class="dl-meta">Android 7.0 及以上 · 数据仅存本机</div>
         </div>
         <div class="dl-card med" data-reveal class="d3">
-          <div class="row"><div class="dl-logo">药</div><div><h3>家庭用药管家</h3><div class="sub">常吃药记录 · v1.0.1</div></div></div>
+          <div class="row"><div class="dl-logo">药</div><div><h3>家庭用药管家</h3><div class="sub">常吃药记录 · v1.1.0</div></div></div>
           <p>记下家人常吃的药：药名、品牌、剂量、次数一目了然。拍处方本地识别录入，今日计划一键打卡，库存临期有提醒。</p>
           <button class="dl-btn" data-download="med"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v14m0 0l-6-6m6 6l6-6"/></svg> 下载 APK</button>
           <div class="dl-meta">Android 7.0 及以上 · 本地识别，照片不上传</div>
@@ -751,7 +751,7 @@ const DOWNLOAD_URLS = {
   // 长辈桌面 ElderDesktop APK
   elder: "https://yuanxx9608.github.io/downloads/elder-desktop.apk",
   // 家庭用药管家 FamilyMed APK（本站 downloads，分片合并下载）
-  med: "downloads/family-medication-manager-v1.0.1.apk"
+  med: "downloads/family-medication-manager-v1.1.0.apk"
 };
 
 /* 家庭用药管家 APK 分片下载：并行拉取分片、按序合并后触发下载 */
@@ -772,7 +772,7 @@ async function downloadMed(btn){
     var merged = new Blob(blobs, {type:'application/vnd.android.package-archive'});
     var a = document.createElement('a');
     a.href = URL.createObjectURL(merged);
-    a.download = '家庭用药管家-v1.0.1.apk';
+    a.download = '家庭用药管家-v1.1.0.apk';
     document.body.appendChild(a); a.click();
     setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 4000);
   } catch(e) {
